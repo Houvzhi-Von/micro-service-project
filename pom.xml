@@ -26,7 +26,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
-        <alibaba-nacos-discovery>2.1.2.RELEASE</alibaba-nacos-discovery>
+        <alibaba-nacos-discovery.version>2.1.2.RELEASE</alibaba-nacos-discovery.version>
         <mysql.version>8.0.16</mysql.version>
         <mybatis.version>2.1.2</mybatis.version>
         <tk.mybatis.version>2.1.5</tk.mybatis.version>
@@ -56,7 +56,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${alibaba-nacos-discovery}</version>
+                <version>${alibaba-nacos-discovery.version}</version>
             </dependency>
 
             <dependency>
