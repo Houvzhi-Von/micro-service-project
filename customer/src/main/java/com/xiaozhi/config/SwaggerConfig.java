@@ -45,7 +45,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("订单微服务 - API")
                 .description("小智")
-                .contact(new Contact("xiaozhi", "http://blog.osnooker.com", "13718913664@163.com"))
+                .contact(new Contact("xiaozhi",
+                        "http://blog.osnooker.com", "13718913664@163.com"))
                 .version("1.0.0")
                 .build();
     }
