@@ -9,10 +9,10 @@ import java.io.Serializable;
 /**
  * @author fenghouzhi
  * @date 2020/5/8 - 6:58 下午
- * @description: DTO - 基类
+ * @description: 查询入参基类 - DTO
  */
 @Data
-@ApiModel(description = "DTO - 基类")
+@ApiModel(description = "查询入参基类 - DTO")
 public class BaseQueryDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

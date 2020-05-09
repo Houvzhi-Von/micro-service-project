@@ -11,7 +11,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
-import util.ResultVOUtil;
+import util.ResultVoUtil;
 import vo.ResultVO;
 
 import javax.annotation.Resource;
@@ -42,9 +42,9 @@ public class CustomerController {
         PageHelper.startPage(baseQueryDTO.getPageNum(), baseQueryDTO.getPageSize());
         List<CustomerVO> customerVOList = customerService.getCustomerVOList();
         if (CollectionUtils.isEmpty(customerVOList)) {
-            return ResultVOUtil.success(Collections.EMPTY_LIST);
+            return ResultVoUtil.success(Collections.EMPTY_LIST);
         }
-        return ResultVOUtil.success(new PageInfo<>(customerVOList));
+        return ResultVoUtil.success(new PageInfo<>(customerVOList));
     }
 
     /**
@@ -58,9 +58,9 @@ public class CustomerController {
     public ResultVO addCustomer(@RequestBody CustomerDTO customerDTO) {
         int addResult = customerService.addCustomer(customerDTO);
         if (addResult > 0) {
-            return ResultVOUtil.success();
+            return ResultVoUtil.success();
         } else {
-            return ResultVOUtil.error(ResultEnum.Failure);
+            return ResultVoUtil.error(ResultEnum.FAILURE);
         }
     }
 

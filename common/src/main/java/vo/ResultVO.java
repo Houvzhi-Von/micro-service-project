@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author fenghouzhi
  * @date 2020/5/8 - 11:31 下午
- * @description:
+ * @description: 统一响应对象 - VO
  */
 @Data
 @ApiModel(value = "统一响应对象")
