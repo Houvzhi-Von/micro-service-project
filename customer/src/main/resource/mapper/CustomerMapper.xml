@@ -1,0 +1,29 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaozhi.dao.mapper.CustomerMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaozhi.entity.Customer">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <id column="customer_name" jdbcType="VARCHAR" property="customerName"/>
+        <id column="customer_address" jdbcType="VARCHAR" property="customerAddress"/>
+        <id column="delete_flag" jdbcType="INTEGER" property="deleteFlag"/>
+    </resultMap>
+
+    <resultMap id="CustomerVOResultMap" type="com.xiaozhi.vo.CustomerVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <id column="customer_name" jdbcType="VARCHAR" property="customerName"/>
+        <id column="customer_address" jdbcType="VARCHAR" property="customerAddress"/>
+    </resultMap>
+
+    <sql id="customer_vo_sql">
+        tci.id, tci.customer_name, tci.customer_address
+    </sql>
+
+    <select id="getCustomerVOList" resultMap="CustomerVOResultMap">
+        SELECT
+        <include refid="customer_vo_sql"/>
+        FROM t_customer_info tci
+    </select>
+
+</mapper>
