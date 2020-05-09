@@ -9,5 +9,4 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * @description: 提供给自己的 MyMapper 继承
  */
 public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
-    //FIXME 特别注意，该接口不能被扫描到，否则会出错
 }
