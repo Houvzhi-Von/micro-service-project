@@ -1,8 +1,5 @@
 package com.xiaozhi.service;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.xiaozhi.dao.mapper.CustomerMapper;
 import com.xiaozhi.dto.CustomerDTO;
 import com.xiaozhi.entity.Customer;
@@ -12,7 +9,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Collections;
 import java.util.List;
 
 /**

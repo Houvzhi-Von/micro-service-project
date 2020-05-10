@@ -9,6 +9,7 @@ import dto.BaseQueryDTO;
 import enums.ResultEnum;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import util.ResultVoUtil;
@@ -23,9 +24,10 @@ import java.util.List;
  * @date 2020/5/8 - 3:05 下午
  * @description: 客户 - API
  */
+@Slf4j
+@Api(tags = "客户 - API")
 @RestController
 @RequestMapping("/customer")
-@Api(tags = "客户 - API")
 public class CustomerController {
 
     @Resource
