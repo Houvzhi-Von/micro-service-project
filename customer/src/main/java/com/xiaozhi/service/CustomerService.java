@@ -1,7 +1,7 @@
 package com.xiaozhi.service;
 
 import com.xiaozhi.dao.mapper.CustomerMapper;
-import com.xiaozhi.dto.CustomerDTO;
+import com.xiaozhi.dto.CustomerAddDTO;
 import com.xiaozhi.entity.Customer;
 import com.xiaozhi.vo.CustomerVO;
 import lombok.extern.slf4j.Slf4j;
@@ -35,9 +35,9 @@ public class CustomerService {
     /**
      * 新增客户
      */
-    public Integer addCustomer(CustomerDTO customerDTO) {
+    public Integer addCustomer(CustomerAddDTO customerAddDTO) {
         Customer customer = new Customer();
-        BeanUtils.copyProperties(customerDTO, customer);
+        BeanUtils.copyProperties(customerAddDTO, customer);
         log.info("insertSelective param info:   {}", customer);
         return customerMapper.insertSelective(customer);
     }

@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(description = "客户 - 新增入参类")
-public class CustomerDTO implements Serializable {
+public class CustomerAddDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

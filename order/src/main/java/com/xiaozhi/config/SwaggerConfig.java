@@ -43,7 +43,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("客户微服务 - API")
+                .title("订单微服务 - API")
                 .description("小智")
                 .contact(new Contact("xiaozhi",
                         "http://blog.osnooker.com", "13718913664@163.com"))

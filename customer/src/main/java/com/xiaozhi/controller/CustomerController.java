@@ -2,7 +2,7 @@ package com.xiaozhi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.xiaozhi.dto.CustomerDTO;
+import com.xiaozhi.dto.CustomerAddDTO;
 import com.xiaozhi.service.CustomerService;
 import com.xiaozhi.vo.CustomerVO;
 import dto.BaseQueryDTO;
@@ -52,13 +52,13 @@ public class CustomerController {
     /**
      * 新增客户
      *
-     * @param customerDTO
+     * @param customerAddDTO
      * @return ResultVO
      */
     @ApiOperation(value = "新增客户")
     @PostMapping("")
-    public ResultVO addCustomer(@RequestBody CustomerDTO customerDTO) {
-        int addResult = customerService.addCustomer(customerDTO);
+    public ResultVO addCustomer(@RequestBody CustomerAddDTO customerAddDTO) {
+        int addResult = customerService.addCustomer(customerAddDTO);
         if (addResult > 0) {
             return ResultVoUtil.success();
         } else {

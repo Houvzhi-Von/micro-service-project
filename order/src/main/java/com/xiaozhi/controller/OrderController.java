@@ -1,9 +1,18 @@
 package com.xiaozhi.controller;
 
+import com.xiaozhi.context.OrderClient;
+import com.xiaozhi.dto.OrderAddDTO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import util.ResultVoUtil;
+import vo.ResultVO;
+
+import javax.annotation.Resource;
 
 /**
  * @author fenghouzhi
@@ -15,5 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
+
+    @Resource
+    private OrderClient orderClient;
+
+    @ApiOperation(value = "创建订单")
+    @PostMapping("")
+    public ResultVO createOrder(@RequestBody OrderAddDTO orderAddDTO) {
+        return ResultVoUtil.success(orderClient.doHandler(orderAddDTO.getOrderType(), orderAddDTO));
+    }
 
 }
