@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @Component
-public class MiniAppOrderImpl implements OrderHandle<OrderAddDTO> {
+public class MiniAppOrderImpl implements OrderHandle {
 
     @Resource
     private OrderService orderService;

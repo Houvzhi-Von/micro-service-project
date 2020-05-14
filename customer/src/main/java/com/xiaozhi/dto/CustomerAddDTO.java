@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @description: 客户 - 新增入参类
  */
 @Data
-@ApiModel(description = "客户 - 新增入参类")
+@ApiModel(value = "客户 - 新增入参类")
 public class CustomerAddDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

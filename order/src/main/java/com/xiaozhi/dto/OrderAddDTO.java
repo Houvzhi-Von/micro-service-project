@@ -13,7 +13,7 @@ import java.util.Date;
  * @description: 订单 - 新增入参类
  */
 @Data
-@ApiModel(description = "订单 - 新增入参类")
+@ApiModel(value = "订单 - 新增入参类")
 public class OrderAddDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

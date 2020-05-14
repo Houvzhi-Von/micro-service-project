@@ -22,10 +22,6 @@ public class ApplicationContextHelper implements ApplicationContextAware {
         this.applicationContext = applicationContext;
     }
 
-    public <T> T getBean(Class<T> clazz) {
-        return applicationContext.getBean(clazz);
-    }
-
     public <T> Map<String, T> getBeansOfType(Class<T> clazz) {
         return applicationContext.getBeansOfType(clazz);
     }

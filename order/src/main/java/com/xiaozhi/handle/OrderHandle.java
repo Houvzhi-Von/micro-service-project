@@ -1,11 +1,13 @@
 package com.xiaozhi.handle;
 
+import com.xiaozhi.dto.OrderAddDTO;
+
 /**
  * @author fenghouzhi
  * @date 2020/5/10 - 9:26 下午
  * @description: 订单 Handler - OrderHandle
  */
-public interface OrderHandle<T> {
+public interface OrderHandle {
 
     /**
      * 获取实现类类型
@@ -17,9 +19,9 @@ public interface OrderHandle<T> {
     /**
      * 创建订单
      *
-     * @param t
+     * @param orderAddDTO
      * @return String
      */
-    String createOrder(T t);
+    String createOrder(OrderAddDTO orderAddDTO);
 
 }

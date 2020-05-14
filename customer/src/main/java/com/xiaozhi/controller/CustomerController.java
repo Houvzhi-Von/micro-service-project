@@ -7,7 +7,10 @@ import com.xiaozhi.service.CustomerService;
 import com.xiaozhi.vo.CustomerVO;
 import dto.BaseQueryDTO;
 import enums.ResultEnum;
+import exception.ApiException;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.CollectionUtils;
@@ -60,6 +63,23 @@ public class CustomerController {
     public ResultVO addCustomer(@RequestBody CustomerAddDTO customerAddDTO) {
         int addResult = customerService.addCustomer(customerAddDTO);
         if (addResult > 0) {
+            return ResultVoUtil.success();
+        } else {
+            return ResultVoUtil.error(ResultEnum.FAILURE);
+        }
+    }
+
+    @ApiOperation(value = "删除客户")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "customerId", paramType = "path", dataType = "Long")
+    })
+    @DeleteMapping("/{customerId}")
+    public ResultVO deleteCustomer(@PathVariable Long customerId) {
+        if (null == customerId) {
+            throw new ApiException(ResultEnum.EMPTY);
+        }
+        int deleteResult = customerService.deleteCustomer(customerId);
+        if (deleteResult > 0) {
             return ResultVoUtil.success();
         } else {
             return ResultVoUtil.error(ResultEnum.FAILURE);

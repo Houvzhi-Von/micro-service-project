@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @description: 查询入参基类 - DTO
  */
 @Data
-@ApiModel(description = "查询入参基类 - DTO")
+@ApiModel(value = "查询入参基类 - DTO")
 public class BaseQueryDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
